@@ -233,3 +233,7 @@ class Forum(models.Model):
     def __str__(self):
         return f"Форум #{self.id}"
 
+
+class Fond(models.Model):
+    pass
+
