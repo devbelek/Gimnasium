@@ -1,8 +1,6 @@
 from rest_framework import viewsets, status, generics
 from rest_framework.permissions import DjangoModelPermissionsOrAnonReadOnly, IsAuthenticatedOrReadOnly, IsAuthenticated
 from rest_framework.response import Response
-
-from .models import *
 from .serializers import *
 
 
