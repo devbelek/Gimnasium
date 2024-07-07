@@ -168,12 +168,14 @@ class News(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Дата загрузки')
     author = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Автор')
+
     class Meta:
         verbose_name = 'Новости'
         verbose_name_plural = 'Новости'
 
     def __str__(self):
-        return f'Новость от {self.created_at.strftime("%Y-%m-%d")}'
+        return f'Новость от / Жанылык {self.created_at.strftime("%Y-%m-%d")}'
+
 
 
 # Галерея
@@ -302,4 +304,8 @@ class Like(models.Model):
 
     def __str__(self):
         return f'Лайк от {self.user.username} на комментарий {self.comment.id}'
+
+
+class Fond(models.Model):
+    pass
 

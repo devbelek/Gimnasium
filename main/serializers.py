@@ -146,3 +146,6 @@ class TeachersSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teachers
         fields = '__all__'
+
+
+
